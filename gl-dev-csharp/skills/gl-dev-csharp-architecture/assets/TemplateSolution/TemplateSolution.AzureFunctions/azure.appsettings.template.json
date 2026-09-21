@@ -1,0 +1,47 @@
+[
+  {
+    "name": "AzureWebJobsStorage",
+    "value": "@Microsoft.KeyVault(SecretUri=https://YOUR-KEY-VAULT.vault.azure.net/secrets/functions-storage/)",
+    "slotSetting": false
+  },
+  {
+    "name": "FUNCTIONS_WORKER_RUNTIME",
+    "value": "dotnet-isolated",
+    "slotSetting": false
+  },
+  {
+    "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+    "value": "@Microsoft.KeyVault(SecretUri=https://YOUR-KEY-VAULT.vault.azure.net/secrets/app-insights/)",
+    "slotSetting": false
+  },
+  {
+    "name": "ConnectionStrings__AppDb",
+    "value": "@Microsoft.KeyVault(SecretUri=https://YOUR-KEY-VAULT.vault.azure.net/secrets/sql-connection-string/)",
+    "slotSetting": false
+  },
+  {
+    "name": "ConnectionStrings__ServiceBus",
+    "value": "@Microsoft.KeyVault(SecretUri=https://YOUR-KEY-VAULT.vault.azure.net/secrets/service-bus-connection-string/)",
+    "slotSetting": false
+  },
+  {
+    "name": "ConnectionStrings__NotificationHubs",
+    "value": "@Microsoft.KeyVault(SecretUri=https://YOUR-KEY-VAULT.vault.azure.net/secrets/notification-hubs-connection-string/)",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureNotificationHubs__HubName",
+    "value": "notification-hub-name",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureServiceBus__DefaultQueue",
+    "value": "default-queue-name",
+    "slotSetting": false
+  },
+  {
+    "name": "Database__ApplyMigrations",
+    "value": "false",
+    "slotSetting": false
+  }
+]

@@ -1,0 +1,78 @@
+<Solution>
+  <Folder Name="/Adapters/">
+    <Project Path="Adapter.Sms/Adapter.Sms.csproj" Id="8537dd7d-84f3-4735-b6cb-5d106726e648" />
+  </Folder>
+  <Folder Name="/Business/">
+    <Project Path="Business.Contracts/Business.Contracts.csproj" />
+    <Project Path="Business.Impl/Business.Impl.csproj" />
+    <Project Path="Business.Models/Business.Models.csproj" />
+    <Project Path="SubDomain1.Contracts/SubDomain1.Contracts.csproj" />
+    <Project Path="SubDomain1.Impl/SubDomain1.Impl.csproj" />
+    <Project Path="SubDomain2.Contracts/SubDomain2.Contracts.csproj" />
+    <Project Path="SubDomain2.Impl/SubDomain2.Impl.csproj" />
+  </Folder>
+  <Folder Name="/Core/">
+    <Project Path="Business.Core/Business.Core.csproj" />
+    <Project Path="DataAccess.Core.EntityFramework/DataAccess.Core.EntityFramework.csproj" Id="f2f093f4-9a04-40e5-a2c2-ecdbbfe4dc9a" />
+    <Project Path="DataAccess.Core/DataAccess.Core.csproj" />
+  </Folder>
+  <Folder Name="/DataAccess/">
+    <Project Path="DataAccess.Contracts/DataAccess.Contracts.csproj" Id="ceefef19-0839-4b27-a1fb-41555cbed65b" />
+    <Project Path="DataAccess.Dapper.SqLite/DataAccess.Dapper.SqLite.csproj" Id="11735fd3-3445-458b-b0d0-e309a2880c8e" />
+    <Project Path="DataAccess.Dapper/DataAccess.Dapper.csproj" Id="674bdab9-b60b-4f1d-8c1f-d6cbe70ea12b" />
+    <Project Path="DataAccess.EntityFramework.MsSql/DataAccess.EntityFramework.MsSql.csproj" Id="f63af7c5-f4ae-45ee-8d6f-b37dd4160809" />
+    <Project Path="DataAccess.EntityFramework.SqLite/DataAccess.EntityFramework.SqLite.csproj" Id="d373fd08-affc-4517-8b8d-cb6ab6b005ab" />
+    <Project Path="DataAccess.EntityFramework/DataAccess.EntityFramework.csproj" Id="50471870-b956-4bf7-8453-07d6b8d61df8" />
+  </Folder>
+  <Folder Name="/DataAccess/Domain1/">
+    <Project Path="Domain1.DataAccess.Contracts/Domain1.DataAccess.Contracts.csproj" Id="ec4b79ee-42cd-4fbc-9745-60a8233664ac" />
+    <Project Path="Domain1.DataAccess.EntityFramework.MsSql/Domain1.DataAccess.EntityFramework.MsSql.csproj" Id="3ca96bb3-a004-451b-9012-7d69ff1cac52" />
+    <Project Path="Domain1.DataAccess.EntityFramework/Domain1.DataAccess.EntityFramework.csproj" Id="480b94b0-1c98-430c-b9d2-4d576c48d534" />
+  </Folder>
+  <Folder Name="/DataAccess/Domain2/">
+    <Project Path="Domain2.DataAccess.Contracts/Domain2.DataAccess.Contracts.csproj" Id="778c2816-1284-44cd-94db-2923e54950ac" />
+    <Project Path="Domain2.DataAccess.EntityFramework.MsSql/Domain2.DataAccess.EntityFramework.MsSql.csproj" Id="bcf3913d-5961-4e0e-9dd4-f49ee287123c" />
+    <Project Path="Domain2.DataAccess.EntityFramework/Domain2.DataAccess.EntityFramework.csproj" Id="8b8eb0c8-712e-463f-a57d-e0ad46aec99f" />
+  </Folder>
+  <Folder Name="/Domain1/">
+    <Project Path="Domain1.Contracts/Domain1.Contracts.csproj" />
+    <Project Path="Domain1.Impl/Domain1.Impl.csproj" />
+    <Project Path="Domain1.Models/Domain1.Models.csproj" />
+  </Folder>
+  <Folder Name="/Domain2/">
+    <Project Path="Domain2.Contracts/Domain2.Contracts.csproj" />
+    <Project Path="Domain2.Impl/Domain2.Impl.csproj" />
+    <Project Path="Domain2.Models/Domain2.Models.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="TemplateSolution.AzureFunctions/TemplateSolution.AzureFunctions.csproj" Id="9b792c16-b469-499e-a63e-b014796d6556" />
+    <Project Path="TemplateSolution.WebApi/TemplateSolution.WebApi.csproj" Id="17fd5c88-eb5b-4d01-8ddc-fceaf05d557e" />
+  </Folder>
+  <Folder Name="/Messaging/">
+    <Project Path="Messaging.AzureBus/Messaging.AzureBus.csproj" />
+    <Project Path="Messaging.Contracts/Messaging.Contracts.csproj" />
+    <Project Path="Messaging.InProcessBus/Messaging.InProcessBus.csproj" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="Shared.Contracts/Shared.Contracts.csproj" />
+    <Project Path="Shared.Impl/Shared.Impl.csproj" />
+    <Project Path="Shared.Log4Net/Shared.Log4Net.csproj" Id="3dd1f1f8-de7d-4011-ad6c-01084826937c" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests.Common/Tests.Common.csproj" Id="4515d491-3dd2-4230-ad1a-cfa0381dbdb2" />
+  </Folder>
+  <Folder Name="/Tests/IntegrationTests/">
+    <Project Path="IntegrationTests/IntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/Tests/ServiceTests/">
+    <Project Path="ServiceTests.Business/ServiceTests.Business.csproj" Id="44f0c4ce-c95c-4ea3-91c2-d0585f18cd3c" />
+    <Project Path="ServiceTests.Domain1/ServiceTests.Domain1.csproj" Id="f0500ec5-a8e4-4f1e-8f94-cbf73074a597" />
+    <Project Path="ServiceTests.Domain2/ServiceTests.Domain2.csproj" Id="96bfd5b2-22cd-408b-92d0-d22082860ab7" />
+  </Folder>
+  <Folder Name="/Tests/UnitTests/">
+    <Project Path="UnitTests.AzureFunctions/UnitTests.AzureFunctions.csproj" Id="b109e712-54e7-4b58-a18b-66f6e365104e" />
+    <Project Path="UnitTests.Business/UnitTests.Business.csproj" Id="1ee664ad-f0a5-4874-9bbb-f8f4478595ab" />
+    <Project Path="UnitTests.EntityFramework.MsSql/UnitTests.EntityFramework.MsSql.csproj" Id="4ab3ab98-c30b-40ad-8bd5-43a1f7860f54" />
+    <Project Path="UnitTests.EntityFramework.SqLite/UnitTests.EntityFramework.SqLite.csproj" Id="0e7eb28b-7594-46d2-81d8-9ea9c6b93ba5" />
+  </Folder>
+</Solution>

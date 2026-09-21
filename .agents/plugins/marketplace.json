@@ -1,0 +1,20 @@
+{
+  "name": "git-plugins",
+  "interface": {
+    "displayName": "Git Plugins"
+  },
+  "plugins": [
+    {
+      "name": "gl-dev-csharp",
+      "source": {
+        "source": "local",
+        "path": "./gl-dev-csharp"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

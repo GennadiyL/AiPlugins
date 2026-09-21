@@ -1,0 +1,67 @@
+{
+    "info": {
+        "_postman_id": "39ff6171-54a9-4f70-a41c-e7f576dd817f",
+        "name": "Template-Solution",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "23254387"
+    },
+    "item": [
+        {
+            "name": "Local",
+            "item": [
+                {
+                    "name": "AuditEvents",
+                    "item": [
+                        {
+                            "name": "get-audit-events",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                ],
+                                "url": {
+                                    "raw": "https://{{app-host}}/audit-events/get-audit-events?pageNumber=1&pageSize=25",
+                                    "protocol": "https",
+                                    "host": [
+                                        "{{app-host}}"
+                                    ],
+                                    "path": [
+                                        "audit-events",
+                                        "get-audit-events"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "from",
+                                            "value": "",
+                                            "disabled": true
+                                        },
+                                        {
+                                            "key": "to",
+                                            "value": "",
+                                            "disabled": true
+                                        },
+                                        {
+                                            "key": "pageNumber",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "25"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "app-host",
+            "value": "localhost:7199"
+        }
+    ]
+}
