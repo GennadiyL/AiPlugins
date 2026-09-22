@@ -15,10 +15,6 @@ public class AuditEvent : BaseEntity
 	{
 	}
 
-	public AuditEvent(Guid id) : base(id)
-	{
-	}
-
 	public DateTime OccurredAt { get; set; }
 	public string EventType { get; set; } = string.Empty;
 	public string AggregateType { get; set; } = string.Empty;

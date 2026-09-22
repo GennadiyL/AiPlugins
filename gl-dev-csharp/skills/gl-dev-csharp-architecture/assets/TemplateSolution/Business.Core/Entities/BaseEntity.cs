@@ -3,22 +3,18 @@ namespace Business.Core.Entities;
 /// <summary>
 /// Defines the persistent business entity base.
 /// Supplies Guid identity and identity-based equality for persistent business models.
-/// Concrete model classes derive from it and may accept an existing identifier when materialized.
+/// Concrete model classes derive from it and expose identity through a read/write property.
 /// It implements IBaseEntity and establishes the common identity semantics used by data mapping.
 /// It does not add domain behavior or persistence operations.
 /// </summary>
 public abstract class BaseEntity : IBaseEntity, IEquatable<IBaseEntity>
 {
-	protected BaseEntity() : this(Guid.NewGuid())
+	protected BaseEntity()
 	{
+		Id = Guid.NewGuid();
 	}
 
-	protected BaseEntity(Guid id)
-	{
-		Id = id;
-	}
-
-	public Guid Id { get; }
+	public Guid Id { get; set; }
 
 	public bool Equals(IBaseEntity? other) => other != null && Id.Equals(other.Id);
 

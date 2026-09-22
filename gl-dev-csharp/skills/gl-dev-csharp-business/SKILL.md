@@ -22,7 +22,8 @@ When placing types inside `Business.Models`, `Business.Contracts`, `Business.Imp
 
 - Persistent business models derive from `BaseEntity`.
 - Use only anemic POCO classes for persistent business models. Keep business behavior in services and operations rather than on the models.
-- Every persistent business entity exposes its primary key as `Id`. Prefer `Guid`; `long` is also allowed, but use one key type consistently for all persistent business entities in the solution.
+- Every persistent business entity exposes its primary key as a read/write `Id` property. Prefer `Guid`; `long` is also allowed, but use one key type consistently for all persistent business entities in the solution.
+- Persistent business entities have only a parameterless constructor. Use a public parameterless constructor on concrete entities and a protected parameterless constructor on an abstract entity base. Initialize and materialize entities through their read/write properties rather than constructor parameters.
 - Store date and time values as UTC by convention; do not add a `Utc` suffix to property names.
 - Use only arrays (`T[]`), `List<T>`, `Dictionary<TKey, TValue>`, or `HashSet<T>` as concrete collection types in persistent business models and DTOs. A property may expose `ICollection<T>` backed by one of these concrete types.
 - Persistent-business-model collection properties have both `get` and `set` accessors and normally initialize to an empty collection, for example `public ICollection<Employee> Employees { get; set; } = new List<Employee>();`.

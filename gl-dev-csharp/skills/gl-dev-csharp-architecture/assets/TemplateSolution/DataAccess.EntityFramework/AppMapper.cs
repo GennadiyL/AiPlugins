@@ -83,8 +83,9 @@ internal class AppMapper : IMapper
 		Source = value.Source
 	};
 
-	private static AuditEventEntity Map(AuditEvent value) => new(value.Id)
+	private static AuditEventEntity Map(AuditEvent value) => new()
 	{
+		Id = value.Id,
 		OccurredAt = value.OccurredAt,
 		EventType = value.EventType,
 		AggregateType = value.AggregateType,

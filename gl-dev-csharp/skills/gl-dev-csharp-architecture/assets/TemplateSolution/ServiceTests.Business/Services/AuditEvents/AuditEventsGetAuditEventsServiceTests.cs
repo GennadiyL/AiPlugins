@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NSubstitute;
 using NUnit.Framework;
 using Shared.Impl;
-using Tests.Common.Utils;
+using Tests.Common.DiConfigurations;
 
 #pragma warning disable JSON002
 
@@ -137,8 +137,9 @@ public sealed class AuditEventsGetAuditEventsServiceTests
 		});
 	}
 
-	private static AuditEvent CreateAuditEvent(Guid id, DateTime occurredAt) => new(id)
+	private static AuditEvent CreateAuditEvent(Guid id, DateTime occurredAt) => new()
 	{
+		Id = id,
 		OccurredAt = occurredAt,
 		EventType = "EventRecorded",
 		AggregateType = "Order",
