@@ -14,6 +14,10 @@ Apply this baseline to every C# source change. Layer-specific skills add archite
 - Do not derive formatting rules from any other `.editorconfig`, `Directory.Build.props`, analyzer configuration, general convention, or neighboring source code.
 - If no `.editorconfig` exists alongside the solution file, do not invent or import formatting rules.
 
+## Source files
+
+- Place every class and enum in its own `.cs` file. Name the file exactly after the class or enum it contains.
+
 ## Comments and XML documentation
 
 - Use XML documentation only; do not add ordinary line, block, or property comments.

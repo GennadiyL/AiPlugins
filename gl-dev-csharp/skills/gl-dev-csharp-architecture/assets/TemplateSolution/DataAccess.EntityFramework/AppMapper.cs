@@ -1,8 +1,8 @@
 using Business.Core.Entities;
 using DataAccess.Core.Behaviors;
 using DataAccess.Core.Entities;
+using DataAccess.EntityFramework.Models;
 
-using AuditEvent = DataAccess.EntityFramework.Models.AuditEvent;
 using AuditEventEntity = Business.Models.Entities.AuditEvent;
 #pragma warning disable CA1859
 
