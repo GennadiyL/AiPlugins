@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Dev CSharp: Business"
+  short_description: "Implement business models, contracts, and services"
+  default_prompt: "Use $gl-dev-csharp-business to implement or review this business model, contract, or service."
+
+policy:
+  allow_implicit_invocation: true

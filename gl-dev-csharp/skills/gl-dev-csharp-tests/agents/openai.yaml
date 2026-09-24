@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Dev CSharp: Tests"
+  short_description: "Create NUnit tests and test dependency injection"
+  default_prompt: "Use $gl-dev-csharp-tests to create or review NUnit tests for this GL feature."
+
+policy:
+  allow_implicit_invocation: true

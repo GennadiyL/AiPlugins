@@ -1,0 +1,35 @@
+{
+  "name": "gl-analysis",
+  "version": "0.1.0",
+  "description": "Requirements discovery, BRD, TRD, contract analysis, and C# development handoff.",
+  "author": {
+    "name": "GL"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "requirements",
+    "brd",
+    "trd",
+    "analysis",
+    "csharp-handoff"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "GL Analysis",
+    "shortDescription": "Draft and review business and technical requirements.",
+    "longDescription": "Discover requirements, draft and review business requirements documents (BRDs) and technical requirements documents (TRDs), and prepare approved artifacts for GL Dev CSharp.",
+    "developerName": "GL",
+    "category": "Productivity",
+    "capabilities": [
+      "Requirements discovery",
+      "Business requirements",
+      "Technical requirements",
+      "Contract analysis"
+    ],
+    "defaultPrompt": [
+      "Discover requirements for this feature.",
+      "Create a BRD from approved discovery.",
+      "Prepare a TRD for C# development handoff."
+    ]
+  }
+}

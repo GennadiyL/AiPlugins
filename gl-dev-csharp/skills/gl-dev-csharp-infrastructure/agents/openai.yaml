@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Dev CSharp: Infrastructure"
+  short_description: "Implement external adapters and message consumers"
+  default_prompt: "Use $gl-dev-csharp-infrastructure to implement or review this external-system adapter or message consumer."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Analysis: Requirements Workflow"
+  short_description: "Coordinate gated analysis phases and handoff"
+  default_prompt: "Use $gl-analysis-req-workflow to coordinate the next valid GL Analysis phase for this feature."
+
+policy:
+  allow_implicit_invocation: false

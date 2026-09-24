@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Analysis: Requirements Discovery"
+  short_description: "Explore a feature idea before BRD work"
+  default_prompt: "Use $gl-analysis-req-discover to examine this feature idea and record open questions."
+
+policy:
+  allow_implicit_invocation: true

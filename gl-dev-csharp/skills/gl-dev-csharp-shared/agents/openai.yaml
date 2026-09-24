@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Dev CSharp: Shared"
+  short_description: "Implement reusable services and shared context"
+  default_prompt: "Use $gl-dev-csharp-shared to implement or review this shared service or shared context."
+
+policy:
+  allow_implicit_invocation: true

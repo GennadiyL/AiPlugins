@@ -1,18 +1,37 @@
 {
   "name": "gl-dev-csharp",
   "version": "0.1.1",
-  "description": "GL Dev CSharp plugin",
+  "description": "Software architecture and C# development.",
   "author": {
-    "name": "Local developer"
+    "name": "GL"
   },
+  "license": "Apache-2.0",
+  "keywords": [
+    "csharp",
+    "dotnet",
+    "architecture",
+    "ef-core",
+    "webapi",
+    "testing"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "GL Dev CSharp",
-    "shortDescription": "Use GL Dev CSharp in Codex.",
-    "longDescription": "GL Dev CSharp adds a local Codex plugin scaffold.",
-    "developerName": "Local developer",
+    "shortDescription": "Create clean architecture and C# code in Codex.",
+    "longDescription": "Design and implement .NET solutions, including business models, service contracts, persistence, APIs, infrastructure, and tests.",
+    "developerName": "GL",
     "category": "Productivity",
-    "capabilities": [],
-    "defaultPrompt": "Help me use GL Dev CSharp."
+    "capabilities": [
+      "C# development",
+      "Solution architecture",
+      "Business models and services",
+      "Data access and EF Core",
+      "Web APIs",
+      "Infrastructure integration",
+      "Automated testing"
+    ],
+    "defaultPrompt": [
+      "Implement this feature in C# using GL conventions."
+    ]
   }
 }

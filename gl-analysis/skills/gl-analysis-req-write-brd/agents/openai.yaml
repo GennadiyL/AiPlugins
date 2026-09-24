@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Analysis: Business Requirements"
+  short_description: "Draft traceable business requirements"
+  default_prompt: "Use $gl-analysis-req-write-brd to draft the BRD from approved discovery decisions."
+
+policy:
+  allow_implicit_invocation: true

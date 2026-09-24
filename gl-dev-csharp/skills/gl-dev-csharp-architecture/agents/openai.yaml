@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Dev CSharp: Architecture"
+  short_description: "Organize solution layers and dependency injection"
+  default_prompt: "Use $gl-dev-csharp-architecture to apply GL architecture conventions to this solution change."
+
+policy:
+  allow_implicit_invocation: true

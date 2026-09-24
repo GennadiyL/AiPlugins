@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Analysis: Requirements Review"
+  short_description: "Review BRD/TRD quality and handoff readiness"
+  default_prompt: "Use $gl-analysis-req-review to review this BRD/TRD package and write the three quality and traceability checklists."
+
+policy:
+  allow_implicit_invocation: true

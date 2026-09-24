@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Analysis: Technical Requirements"
+  short_description: "Draft solution-neutral models, DTOs, and service contracts"
+  default_prompt: "Use $gl-analysis-req-write-trd to create or revise a solution-neutral TRD from the exact approved BRD."
+
+policy:
+  allow_implicit_invocation: true

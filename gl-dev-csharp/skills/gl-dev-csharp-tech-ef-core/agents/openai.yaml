@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Dev CSharp: EF Core"
+  short_description: "Implement EF Core queries, persistence, and concurrency"
+  default_prompt: "Use $gl-dev-csharp-tech-ef-core to implement or review this EF Core query or persistence change."
+
+policy:
+  allow_implicit_invocation: true

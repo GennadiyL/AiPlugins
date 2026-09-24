@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Dev CSharp: Data Access"
+  short_description: "Implement repositories and persistence contracts"
+  default_prompt: "Use $gl-dev-csharp-data-access to implement or review this repository or persistence contract."
+
+policy:
+  allow_implicit_invocation: true

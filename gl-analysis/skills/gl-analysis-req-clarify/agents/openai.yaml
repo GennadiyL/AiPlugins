@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Analysis: Requirements Clarification"
+  short_description: "Resolve one requirements ambiguity at a time"
+  default_prompt: "Use $gl-analysis-req-clarify to resolve the highest-impact ambiguity in this requirements artifact."
+
+policy:
+  allow_implicit_invocation: true

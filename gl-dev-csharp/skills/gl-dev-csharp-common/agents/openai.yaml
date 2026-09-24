@@ -1,0 +1,7 @@
+interface:
+  display_name: "GL Dev CSharp: Common"
+  short_description: "Apply C# formatting and documentation conventions"
+  default_prompt: "Use $gl-dev-csharp-common to apply GL C# formatting and documentation conventions to this code."
+
+policy:
+  allow_implicit_invocation: true
