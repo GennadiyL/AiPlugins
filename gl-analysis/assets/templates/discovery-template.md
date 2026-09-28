@@ -50,11 +50,16 @@
 
 [Prioritize material unknowns. Mark whether each blocks a safe BRD draft or can remain recorded for
 clarification before BRD approval. Ask one highest-impact question at a time when interaction is
-needed.]
+needed. Before listing a question, reconcile it with current decisions and relevant source answers.
+Remove or close questions already answered; do not reopen a business decision merely because its
+technical mechanism remains unresolved.]
 
 ## Decisions and Rationale
 
-[Record only explicit decisions, who made them, when, and why. Otherwise: None recorded.]
+[Record only explicit decisions, who made them, when, and why. Identify the current rule and retain
+superseded statements as historical provenance rather than active requirements. When a decision
+answers a question, update related summaries, assumptions, risks, and readiness. Otherwise: None
+recorded.]
 
 ## Rejected Ideas
 

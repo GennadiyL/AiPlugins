@@ -1,6 +1,6 @@
 ---
 name: gl-analysis-req-write-brd
-description: Use when a feature's business requirements, use cases, or brd.md need drafting or revision from discovery decisions.
+description: Use when a feature's business requirements, Business Capabilities, or brd.md need drafting or revision from discovery decisions.
 ---
 
 # GL Analysis: Write Business Requirements
@@ -25,17 +25,23 @@ decisions, and an existing BRD if present. Preserve stable IDs for unchanged mea
    separate assumptions, unresolved questions, and proposed wording from approved decisions. Ask
    rather than choose a material business limit, threshold, policy, or success target. A question
    that can remain in a safe draft stays labeled and blocks approval until resolved.
-3. Use `ROLE-###`, `UC-###`, `BR-###`, `FR-###`, `NFR-###`, and `SC-###` from the contract. Give each
-   use case a role, trigger, preconditions, main flow, alternate/error flows, outcome, linked
-   requirements, and Given/When/Then scenarios. Make objectives and success measures observable;
-   record unknown baselines or targets as approval questions. Trace active IDs to source and
-   business outcomes; retain explicit scope, exclusions, dependencies, risks, and deferred items.
-   Every active main-flow step, alternate/error flow, outcome, and acceptance scenario must be
-   supported by an approved source. If the source does not define the behavior, mark that field
-   unresolved or proposed instead of inventing an active rule; a generic approval/rejection does
-   not itself establish that a decision is recorded, communicated, or assigned a status. Link the
-   gap to an assumption or question and its affected IDs; mark it an approval blocker when material.
-   Label proposed Given/When/Then scenarios separately until the business accepts them.
+3. Use `ROLE-###`, `BC-###`, `BR-###`, `FR-###`, `NFR-###`, and `SC-###` from the contract. Define
+   each Business Capability as a high-level business ability with an observable intended outcome,
+   participating roles, scope, source, high-level flow, meaningful business alternatives, linked
+   requirements, and concise acceptance examples. A capability may encompass several distinct
+   user actions; do not turn it into an exhaustive UI script or an API specification. Make
+   objectives and success measures observable; record unknown baselines or targets as approval
+   questions. Trace active IDs to source and business outcomes; retain explicit scope, exclusions,
+   dependencies, risks, and deferred items. Every active capability outcome, flow, alternative, and
+   acceptance example must be supported by an approved source. If the source does not define the
+   behavior, mark that field unresolved or proposed instead of inventing an active rule; a generic
+   approval/rejection does not itself establish that a decision is recorded, communicated, or
+   assigned a status. Link the gap to an assumption or question and its affected IDs; mark it an
+   approval blocker when material. Label proposed acceptance examples separately until the business
+   accepts them.
+   Reserve `UC-###-##` for action-level Detailed Use Cases in the TRD. When revising a legacy BRD,
+   inspect each old `UC-###`: convert a high-level item to `BC-###` with an explicit old-to-new
+   mapping, but do not relabel an already detailed scenario as a capability.
 4. Keep the BRD at the business level. Describe required behavior and results without C#, ASP.NET,
    databases, endpoints, DTOs, service interfaces, architecture, projects, or source placement.
    Technical preferences in the request can be noted as later design input, never promoted to BRD

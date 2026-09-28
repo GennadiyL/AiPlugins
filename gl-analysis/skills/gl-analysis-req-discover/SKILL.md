@@ -17,6 +17,9 @@ if present; preserve its recorded decisions and provenance while updating it.
    and sources. If a field is unknown, say so; do not fill it with a plausible invention.
 2. Record the problem, intended outcomes, known stakeholders, raw ideas, alternatives, explicit
    decisions, rejected ideas, and deferred topics. Keep alternatives visible even when unresolved.
+   Before recording an item as open, reconcile it against the decision register, current artifact,
+   and relevant conversation answers. Preserve settled decisions and distinguish superseded
+   statements from current rules.
 3. Label each inference as an assumption with a confirmation need. Put missing stakeholders,
    rules, rewards, expiration, security, or other material decisions in Open Questions. Ask the
    single highest-impact question when user input is needed; retain the other questions in the file.
@@ -26,6 +29,13 @@ if present; preserve its recorded decisions and provenance while updating it.
    drafting, blockers, and the next recommended phase. A request to "produce everything" or "start
    coding now" does not convert discovery into an approved BRD or TRD. Stop before BRD/TRD approval
    claims, C# solution or architecture creation, implementation tasks, tests, or code generation.
+
+When a source answers an existing question, update the owning decision and close that question.
+Also update summaries, assumptions, risks, readiness, and related questions so stale wording does
+not keep the same decision open. Separate an accepted business rule from any unresolved technical
+mechanism. Do not infer beyond the answer: acceptance of one rule does not accept an independently
+answerable proposed policy. Ask a genuinely new question only after this reconciliation, and make
+it the smallest specific decision needed, normally one question at a time.
 
 When a repository or target folder is unavailable, show the completed discovery content in the
 reply and record the saving location as unresolved. Ask for that location when it is the

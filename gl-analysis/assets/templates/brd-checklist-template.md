@@ -38,13 +38,13 @@ artifact check.
 | BRD-C-004 | Roles | Each active role has one stable ID, consistent meaning, and business responsibility. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-005 | Scope | In-scope, out-of-scope, deferred, and rejected material are distinguishable. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-006 | Business rules | Active rules are testable, source-backed, and free of unresolved material decisions. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
-| BRD-C-007 | Use-case flows | Each use case has role, trigger, preconditions, main flow, alternate/error flows, outcome, links, and acceptance scenarios. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
-| BRD-C-008 | Functional requirements | Functional requirements are verifiable, scoped, source-backed, and linked to use cases/rules. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
+| BRD-C-007 | Business Capabilities | Each capability has a stable BC ID, high-level business ability, intended outcome, participating roles, source-backed high-level flow and alternatives, requirement links, and concise acceptance examples without TRD/API detail. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
+| BRD-C-008 | Functional requirements | Functional requirements are verifiable, scoped, source-backed, and linked to capabilities/rules. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-009 | Business-facing NFRs | Applicable expectations are measurable and linked, or their absence is explicit. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-010 | Measurable outcomes | Success criteria have calculation, baseline/source, target/timeframe, and evidence owner. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-011 | Assumptions and dependencies | Facts, assumptions, questions, and dependencies are separated with owners and impacts. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-012 | Risks | Material risks have impact, owner/status, and mitigation or decision need. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
-| BRD-C-013 | Stable IDs and links | Active ROLE/UC/BR/FR/NFR/SC IDs are unique, meaningful, and internally traceable. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
+| BRD-C-013 | Stable IDs and links | Active ROLE/BC/BR/FR/NFR/SC IDs are unique, meaningful, and internally traceable; identifier migrations preserve old-to-new meaning. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-014 | Contradictions | No active statements or stable IDs have conflicting meaning. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-015 | Unresolved approval blockers | Material questions and proposed behavior are explicit and prevent false approval. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |
 | BRD-C-016 | Approval provenance | Approved status, when present, is supported by an exact-version decision and scope. | [Pass/Fail/Not applicable] | [location] | [IDs/none] |

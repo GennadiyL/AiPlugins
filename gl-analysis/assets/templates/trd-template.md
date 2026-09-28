@@ -20,11 +20,35 @@ does not approve this TRD or authorize development.
 - Proposed constraints: [proposal, rationale, affected IDs]
 - Unresolved constraints and blockers: [question, owner, affected IDs]
 
-## Role and Use-Case Traceability
+## Role and Business-Capability Traceability
 
-| BRD role/use case | Business meaning retained from BRD | Technical operation or non-system classification | Authorization source | Status/notes |
+| BRD role/capability | Business meaning retained from BRD | Detailed use case(s) or non-system classification | Authorization source | Status/notes |
 | --- | --- | --- | --- | --- |
-| [ROLE/UC ID] | [BRD reference, not a redefinition] | [OP-### or explicit non-system work] | [BRD ID] | [resolved/proposed/unresolved] |
+| [ROLE/BC ID] | [BRD reference, not a redefinition] | [UC-###-## or explicit non-system work] | [BRD ID] | [resolved/proposed/unresolved] |
+
+## Detailed Use Cases
+
+### UC-001-01 — [Specific action or user goal]
+
+- Parent capability: [BC-001 — readable capability name]
+- Linked requirements: [ROLE/BR/FR/NFR/SC IDs as applicable]
+- Role: [ROLE-###]
+- Trigger: [Event or user intent that starts this scenario]
+- Preconditions: [Reproducible conditions, or an explicit shared-precondition reference]
+- Main flow: [Concise action and observable result; avoid button-by-button UI scripting]
+- Alternative flows:
+  - A1: [Meaningful validation, cancellation, or exceptional condition and resulting state]
+  - A2: [Another supported alternative and resulting state]
+- Postcondition: [Observable state after success; combine with the main flow when unambiguous]
+- API/BFF operations: [OP-### — LogicalService.Operation, or justified local/UI-only/non-system action]
+- Manual-test scenarios: [Identifiers for the main and each alternative flow, with expected results]
+
+[Repeat for each action-level scenario. A capability may have several Detailed Use Cases. Do not
+copy each capability into one equally broad use case. Use explicit source/destination terms when
+selection order matters. Unsupported UI actions, selected state, error policy, or operations remain
+proposed/unresolved. State whether data changes, remains unchanged, or awaits further action when
+required. Reference shared business rules instead of duplicating them. These scenarios support
+manual testing but are not executed test evidence or complete fixture-level procedures.]
 
 ## Persistent Model Schemas
 
@@ -70,13 +94,14 @@ shape active.
 
 #### OP-### — [Logical operation name]
 
-- Linked BRD use cases and requirements: [UC/BR/FR/NFR/SC IDs]
+- Linked Detailed Use Cases and BRD requirements: [UC/BC/BR/FR/NFR/SC IDs]
 - Authorized roles: [ROLE IDs and authorization-rule source]
 - Input: [DTO-### or None; explicit source plus approved/proposed/unresolved status]
 - Output: [DTO-### or None; explicit source plus approved/proposed/unresolved status]
 - Validation and domain errors: [source-backed errors; proposed/unresolved details labeled]
 - Side effects: [source-backed effects; proposed/unresolved details labeled]
 - Transaction boundary: [approved/proposed/unresolved]
+- Retry semantics: [approved/proposed/unresolved]
 - Idempotency: [approved/proposed/unresolved]
 - Optional transport metadata: [approved/proposed/unresolved/none]
 
@@ -118,21 +143,35 @@ Do not invent an error taxonomy, detailed error code, or transport status as an 
 | --- | --- | --- | --- | --- |
 | [statement/question] | [assumption/proposal/open question] | [IDs] | [owner] | [blocking/non-blocking and why] |
 
-## Complete Traceability Matrix
+## BRD-to-TRD Traceability Matrix
 
 | BRD ID | TRD ID(s) / section | Coverage | Notes |
 | --- | --- | --- | --- |
-| [ROLE/UC/BR/FR/NFR/SC ID] | [PM/DTO/SVC/OP ID or section] | [covered/partial/non-system/unresolved] | [source-status detail] |
+| [ROLE/BC/BR/FR/NFR/SC ID] | [UC/PM/DTO/SVC/OP ID or section] | [covered/partial/non-system/unresolved] | [source-status detail] |
 
-Every BRD role, use case, business rule, functional requirement, non-functional requirement, and
-success criterion receives a row. Every TRD reference resolves.
+Every BRD role, Business Capability, business rule, functional requirement, non-functional
+requirement, and success criterion receives one row. Do not add child Detailed Use Cases to this
+BRD coverage denominator.
+
+## Detailed-Use-Case-to-Operation Matrix
+
+| Detailed Use Case | Parent capability | Operation(s) or classification | Manual-test scenarios | Status/notes |
+| --- | --- | --- | --- | --- |
+| UC-001-01 | BC-001 | [OP-### — LogicalService.Operation, or justified local/UI-only/non-system action] | [Main; A1; A2] | [covered/partial/missing/conflict] |
+
+Every Detailed Use Case receives one row, every operation reference resolves to a readable logical
+service and operation name, and every operation links back to its use cases and applicable BRD
+requirements. Shared operations may serve multiple use cases and a use case may require multiple
+operations. Evaluate this matrix separately from BRD coverage so capability and child-use-case rows
+do not inflate the coverage percentage.
 
 ## Development Handoff Readiness
 
 - Readiness: [Ready | Not ready]
 - Blocking decisions: [open item and affected IDs]
-- Mandatory contract checks: [reference resolution, DTO separation, typing/nullability,
-  authorization, errors, effects, transaction/idempotency, traceability]
+- Mandatory contract checks: [capability-to-use-case and use-case-to-operation coverage, manual-test
+  usefulness, reference resolution, DTO separation, typing/nullability, authorization, errors,
+  effects, transaction/retry/idempotency, traceability]
 - Handoff package when ready: approved BRD, approved TRD, and passing review results
 
 GL Analysis stops here. It does not create or place C# projects, files, interfaces, classes,

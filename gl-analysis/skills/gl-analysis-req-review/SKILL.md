@@ -40,12 +40,16 @@ controlled-revision request and a later re-review. Do not treat pressure to "qui
    or field; record missing source evidence as a failure.
 2. Resolve all internal and cross-artifact references. Compare the meaning, not only the spelling,
    of every reused stable ID. Review BRD objectives, stakeholders, roles, scope, rules, complete
-   use-case flows, functional requirements, measurable outcomes, assumptions, risks, contradictions,
-   unresolved blockers, stable IDs, and approval. Review the exact BRD reference, role/use-case
-   mapping, persistent schemas, DTO separation, canonical types, nullability, validation,
-   operations, authorization, errors, side effects, transaction/idempotency, cross-cutting
-   requirements, unresolved questions, full traceability, architecture leakage, readiness, and
-   approval in the TRD.
+   Business Capabilities, functional requirements, measurable outcomes, assumptions, risks,
+   contradictions, unresolved blockers, stable IDs, and approval. Review the exact BRD reference,
+   role/capability mapping, Detailed Use Cases, persistent schemas, DTO separation, canonical types,
+   nullability, validation, operations, authorization, errors, side effects,
+   transaction/idempotency, cross-cutting requirements, unresolved questions, full traceability,
+   architecture leakage, readiness, and approval in the TRD. Review capability coverage separately
+   from Detailed-Use-Case-to-operation coverage. Each Detailed Use Case must have one parent
+   capability, a specific action and observable outcome, supported meaningful alternatives,
+   reproducible preconditions, identifiable manual-test scenarios, and resolvable named operations
+   or a justified local/UI-only or non-system classification.
 3. Give each finding a stable checklist-local ID such as `BRD-F-001`, `TRD-F-001`, or
    `TRACE-F-001`. Every finding row contains severity (`Blocker`, `Important`, or `Minor`), precise
    evidence location, affected requirement/contract IDs, expected condition, observed condition,
@@ -66,7 +70,7 @@ findings, and handoff impact. Its matrix columns are exactly:
 BRD ID | TRD ID(s) | Status | Notes
 ```
 
-Enumerate every applicable active `ROLE-###`, `UC-###`, `BR-###`, `FR-###`, `NFR-###`, and
+Enumerate every applicable active `ROLE-###`, `BC-###`, `BR-###`, `FR-###`, `NFR-###`, and
 `SC-###` in the reviewed BRD. Each receives exactly one row with `Covered`, `Partial`, `Missing`,
 `Non-system`, or `Conflict`. `Non-system` is valid only when the TRD explicitly justifies the
 classification without contradicting the BRD.
@@ -84,6 +88,21 @@ Create a finding for every Partial, Missing, or Conflict row and for an unsuppor
 When several rows expose the same underlying defect, give each non-covered row its required local
 trace finding and cross-reference the canonical defect finding. Count that underlying defect once
 in the package blocker/remediation total; dependent rows do not create new unique defects.
+
+Create a separate Detailed-Use-Case-to-operation matrix with exactly these columns:
+
+```text
+UC ID | Parent BC ID | Operation(s) or classification | Test scenario status | Notes
+```
+
+Enumerate every active `UC-###-##` in the TRD exactly once. Verify that its parent `BC-###` exists,
+that every operation ID resolves to a readable logical service and operation name, that operations
+link back to the use case and applicable BRD requirements, and that main and alternative flows have
+observable expected results usable as identifiable manual-test scenarios. A shared operation may
+serve multiple use cases and a use case may require multiple operations. Create findings for
+missing, partial, conflicting, unsupported non-system, or non-resolving mappings. Do not add these
+TRD use cases to the BRD coverage numerator or denominator and do not count a capability and its
+children as independent covered BRD IDs.
 
 ## Decide the gates
 

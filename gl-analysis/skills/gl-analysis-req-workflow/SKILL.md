@@ -52,10 +52,10 @@ Use the earliest applicable row:
 | Discovery has a discovery-owned ambiguity explicitly classified as blocking a safe BRD draft or the promotion decision | Route `$gl-analysis-req-clarify` against discovery. |
 | Discovery is not Approved or has no qualifying discovery-to-business promotion decision | Stop for the exact missing approval/decision; broad discovery work may route to `$gl-analysis-req-discover`. |
 | Discovery is Approved, promotion is established, and `brd.md` is absent or needs an authorized revision | Route `$gl-analysis-req-write-brd`. |
-| BRD exists with a material business ambiguity | Route `$gl-analysis-req-clarify` against the BRD. |
+| BRD exists with a material business-scope, Business Capability, rule, or outcome ambiguity | Route `$gl-analysis-req-clarify` against the BRD. |
 | BRD is Draft/In Review but has no material ambiguity | Stop for explicit approval of that exact BRD version. |
 | Exact BRD version is validly Approved and `trd.md` is absent or needs an authorized revision | Route `$gl-analysis-req-write-trd`. |
-| TRD exists with a material technical-contract ambiguity | Route `$gl-analysis-req-clarify` against the TRD. |
+| TRD exists with a material Detailed Use Case or technical-contract ambiguity | Route `$gl-analysis-req-clarify` against the TRD. |
 | TRD is Draft/In Review but has no material ambiguity | Stop for explicit approval of that exact TRD version. |
 | Exact TRD version is validly Approved and review is missing or stale | Route `$gl-analysis-req-review`. |
 | Current review fails | Stop on its findings; recommend one owning write or clarification phase for an explicitly authorized controlled revision, then require re-approval and re-review. |

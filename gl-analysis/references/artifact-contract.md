@@ -9,8 +9,8 @@ Its working `discovery.md`, authoritative `brd.md` and `trd.md`, and review chec
 | Artifact | Authority |
 | --- | --- |
 | `discovery.md` | Working record of raw input, alternatives, assumptions, questions, and decisions; never an implementation source. |
-| Approved `brd.md` | Authority for business scope, roles, use cases, rules, and outcomes. |
-| Approved `trd.md` | Authority for technical requirements and solution-neutral contracts, subject to the approved BRD. |
+| Approved `brd.md` | Authority for business scope, roles, Business Capabilities, rules, and outcomes. |
+| Approved `trd.md` | Authority for Detailed Use Cases, technical requirements, and solution-neutral contracts, subject to the approved BRD. |
 
 Use `Draft`, `In Review`, `Approved`, or `Superseded` as artifact status. A status of `Approved` applies
 only to the artifact and version presented for approval. Discovery approval does not approve a BRD;
@@ -36,11 +36,57 @@ decision is also separate from artifact approval.
 
 ## Identifiers
 
-Stable identifiers use `ROLE-###` for roles, `UC-###` for use cases, `BR-###` for business rules,
-`FR-###` for functional requirements, `NFR-###` for non-functional requirements, `SC-###` for
-success criteria, `PM-###` for persistent models, `DTO-###` for data transfer objects, `SVC-###`
-for logical services, and `OP-###` for service operations. Keep an ID stable when its meaning
+Stable identifiers use `ROLE-###` for roles, `BC-###` for BRD Business Capabilities, `UC-###-##`
+for TRD Detailed Use Cases, `BR-###` for business rules, `FR-###` for functional requirements,
+`NFR-###` for non-functional requirements, `SC-###` for success criteria, `PM-###` for persistent
+models, `DTO-###` for data transfer objects, `SVC-###` for logical services, and `OP-###` for
+service operations. The middle number of a Detailed Use Case identifies its parent capability and
+the final number identifies one action-level scenario within it. Keep an ID stable when its meaning
 persists; use a new ID for a distinct item. Discovery notes need no authoritative IDs.
+
+`BC` means Business Capability, never Business Case. A business case is an investment
+justification and is not the artifact defined by this contract.
+
+A Business Capability describes a high-level business ability and intended outcome; it may include
+several user actions and alternative paths. A Detailed Use Case describes one specific action or
+user goal, its observable result, and meaningful alternatives. Do not duplicate each capability as
+one equally broad use case. Keep detailed scenarios in the TRD beside the logical operations they
+use, while the BRD retains business scope, roles, policies, requirements, and success criteria.
+
+Use this traceability chain:
+
+```text
+Business Capability -> Detailed Use Case -> API/BFF Operation -> Test Scenario
+```
+
+An API/BFF operation is a logical contract, not necessarily an HTTP, remote, public, or cloud
+operation. Every in-scope capability maps to one or more Detailed Use Cases. Every Detailed Use
+Case maps to the operations required for its behavior or explicitly identifies justified
+local/UI-only or non-system work. Each operation links back to its use cases and applicable BRD
+requirements. Main and alternative flows provide identifiable manual-test scenarios with expected
+results. Preserve mappings for roles, rules, functional requirements, non-functional requirements,
+and success criteria; the BC/UC distinction does not replace them.
+
+When migrating an existing identifier scheme, preserve meaning and record an explicit old-to-new
+mapping. A legacy high-level `UC-003` may become `BC-003`, with specific scenarios assigned
+`UC-003-01`, `UC-003-02`, and so on. Inspect the legacy item's meaning first; do not relabel an
+already detailed use case as a capability.
+
+## Artifact responsibilities
+
+| Artifact or section | Responsibility |
+| --- | --- |
+| Discovery | Inputs, decisions, alternatives, assumptions, and open questions. |
+| BRD | Business Capabilities, scope, rules, outcomes, and business acceptance criteria. |
+| TRD Detailed Use Cases | Action-level scenarios, alternatives, expected results, parent capability, and operation links. |
+| TRD API/BFF contracts | Inputs/outputs, validation, authorization, effects, transaction/concurrency, and retry semantics. |
+| TRD schemas | Persistent models and separate DTO contracts with explicit decision status. |
+| Verification artifacts | Concrete manual/automated tests and execution results linked to scenarios. |
+
+Detailed Use Cases can specify reproducible preconditions, actions, and expected results without
+claiming that they are executed test evidence or complete test procedures with concrete fixtures.
+Persistent models remain distinct from API DTOs. BRD approval does not approve the TRD or authorize
+implementation.
 
 ## Promotion and handoff
 

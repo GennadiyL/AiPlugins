@@ -56,42 +56,40 @@ or unresolved questions rather than supplying plausible values.]
 
 ## Business Rules
 
-| ID | Rule or unresolved rule | Source/status | Related use cases and requirements |
+| ID | Rule or unresolved rule | Source/status | Related capabilities and requirements |
 | --- | --- | --- | --- |
-| BR-001 | [Testable business policy, or clearly marked unresolved decision] | [Approved decision or unresolved question] | [UC-###; FR-###] |
+| BR-001 | [Testable business policy, or clearly marked unresolved decision] | [Approved decision or unresolved question] | [BC-###; FR-###] |
 
 [Do not assign a rule value or threshold that the business has not decided.]
 
-## Use Cases
+## Business Capabilities
 
-### UC-001 — [Business goal]
+### BC-001 — [High-level business ability]
 
-- Priority and source: [Priority, if decided; approved source.]
-- Role(s): [ROLE-### and responsibility.]
-- Trigger: [Business event that starts the use case.]
-- Preconditions: [Conditions known to be required; label any unresolved condition.]
-- Main flow: [Numbered business steps from initiation to outcome.]
-- Alternate and error flows: [Numbered deviations, rejection, and business failure outcomes; mark an
-  unresolved policy branch rather than inventing it.]
-- Outcome: [Observable business result and relevant record or notification, if approved.]
+- Outcome: [Observable intended business result.]
+- Scope, priority, and source: [Included ability, priority if decided, and approved source.]
+- Participating roles: [ROLE-### and responsibility.]
+- High-level flow: [Concise business progression; do not describe every click, screen, or API.]
+- Meaningful alternatives: [High-level rejection or alternate outcomes supported by requirements.]
 - Linked requirements: [BR-###, FR-###, NFR-###, SC-### as applicable.]
-- Acceptance scenarios:
-  - Given [business precondition], when [role performs business action], then [observable outcome].
-  - Given [alternate or error condition], when [action occurs], then [observable business outcome].
+- Acceptance examples:
+  - Given [business condition], when [capability is exercised], then [observable outcome].
+  - Given [meaningful alternative], when [action occurs], then [observable business result].
 
-[Repeat the complete structure for each use case.]
+[Repeat the structure for each capability. A capability may contain several action-level scenarios.
+Reserve `UC-###-##` Detailed Use Cases and their operation links for the TRD.]
 
 ## Functional Requirements
 
-| ID | Business capability and verifiable outcome | Priority/status | Source | Linked use cases and rules |
+| ID | Business capability and verifiable outcome | Priority/status | Source | Linked capabilities and rules |
 | --- | --- | --- | --- | --- |
-| FR-001 | [The business must be able to...] | [Priority; approved or proposed] | [Approved source] | [UC-###; BR-###] |
+| FR-001 | [The business must be able to...] | [Priority; approved or proposed] | [Approved source] | [BC-###; BR-###] |
 
 ## Business-Facing Non-Functional Requirements
 
-| ID | Measurable business expectation | Measure/target/status | Source | Linked use cases |
+| ID | Measurable business expectation | Measure/target/status | Source | Linked capabilities |
 | --- | --- | --- | --- | --- |
-| NFR-001 | [Accessibility, timeliness, retention, or other business expectation] | [Unit, target, or unresolved decision] | [Approved source or proposed] | [UC-###] |
+| NFR-001 | [Accessibility, timeliness, retention, or other business expectation] | [Unit, target, or unresolved decision] | [Approved source or proposed] | [BC-###] |
 
 [Use “none established” when the sources provide no business-facing expectation. Do not introduce
 technology, architecture, endpoint, or storage decisions.]
@@ -138,12 +136,19 @@ technology, architecture, endpoint, or storage decisions.]
 
 ## Traceability Summary
 
-| Business outcome | Success criterion | Use case | Business rule | Functional requirement | Business-facing NFR | Source/status |
+| Business outcome | Success criterion | Business capability | Business rule | Functional requirement | Business-facing NFR | Source/status |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Outcome] | SC-### | UC-### | BR-### or none | FR-### | NFR-### or none | [Approved source or proposed] |
+| [Outcome] | SC-### | BC-### | BR-### or none | FR-### | NFR-### or none | [Approved source or proposed] |
 
-[Check that every active UC, BR, FR, NFR, and SC is linked or explicitly explained as not
+[Check that every active BC, BR, FR, NFR, and SC is linked or explicitly explained as not
 applicable. Keep IDs stable when revising the BRD.]
+
+## Identifier Migration
+
+[When revising a legacy identifier scheme, record each old ID, new ID, preserved meaning, and
+rationale. A high-level legacy `UC-003` may become `BC-003`; action-level scenarios belong in the
+TRD as `UC-003-01`, `UC-003-02`, and so on. Do not relabel an already detailed legacy scenario as a
+capability. State "Not applicable" when no migration occurred.]
 
 ## Approval
 
