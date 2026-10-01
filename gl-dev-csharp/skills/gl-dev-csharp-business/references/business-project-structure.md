@@ -50,7 +50,7 @@ The example names are placeholders; use the actual adapter, service, utility, an
 ### Service contracts
 
 - Keep public service interfaces under `Business.Contracts/Services`.
-- Keep each service's DTOs and service-specific enums in a sibling folder named from the interface without the leading `I` or trailing `Service`, such as `Services/One` for `IOneService`.
+- Keep each service's DTOs and service-specific enums in a sibling folder named by pluralizing the domain name after removing the leading `I` and trailing `Service`, such as `Services/Accounts` for `IAccountService`. Follow the common skill folder-naming rule even when template placeholder folders use singular names.
 - These DTOs and enums are exclusive to parameters and return values of the corresponding service contract.
 
 ### Utilities and extensions

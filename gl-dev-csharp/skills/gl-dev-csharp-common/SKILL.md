@@ -14,9 +14,22 @@ Apply this baseline to every C# source change. Layer-specific skills add archite
 - Do not derive formatting rules from any other `.editorconfig`, `Directory.Build.props`, analyzer configuration, general convention, or neighboring source code.
 - If no `.editorconfig` exists alongside the solution file, do not invent or import formatting rules.
 
+## Argument style
+
+- Read and follow argument-style preferences from the solution-level `.editorconfig`, including `resharper_csharp_arguments_*` settings, when generating or reviewing calls.
+- When positional arguments are preferred, do not add redundant argument names such as `cancellationToken: cancellationToken`; pass `cancellationToken` positionally.
+- Keep named arguments only when needed to skip optional parameters or select the intended overload.
+
 ## Source files
 
 - Place every class and enum in its own `.cs` file. Name the file exactly after the class or enum it contains.
+
+## Folder naming
+
+- Use plural names for folders that contain domain types or DTOs: `Accounts`, `Groups`, `Categories`, `CurrencyRates`, `Transactions`, and `LocalConfigs`.
+- Match namespace segments to the plural folder names. Keep individual type and file names singular, such as `Groups/GroupInfo.cs`.
+- Structural or role names such as `Base` are not domain collection names and do not need artificial pluralization.
+- Apply this convention when creating or explicitly renaming folders; do not rename unrelated existing folders.
 
 ## Comments and XML documentation
 

@@ -38,3 +38,9 @@ When placing types inside `Business.Models`, `Business.Contracts`, `Business.Imp
 - Except for sized-collection allocation, initialize records through properties rather than constructors. Record collection properties are get-only, hold a stable collection instance, and normally initialize to an empty collection, for example `public ICollection<MyClass> MyClasses { get; } = new List<MyClass>();`.
 - The only permitted record constructor receives collection sizes and allocates the corresponding collections. For a sized array, store `new MyClass[size]` in a stable get-only property; do not return a new collection from an expression-bodied property.
 - Name business inputs after the operation or business action, such as `CreatePendingShowerOrder` or `ConfirmPaymentForOrder`. Name business outputs with an `Info` suffix, such as `CreatePendingShowerOrderInfo` or `ConfirmPaymentForOrderInfo`.
+
+## Identifier naming
+
+- `Id` names the primary key of a persistent business entity. Its type is `Guid` or `long` and follows the solution's consistent entity-key type.
+- `{ParentEntity}Id` names a foreign key, for example `AccountId`. It references the parent entity's `Id`; its underlying type matches that property, and its nullability follows whether the relationship is required or optional.
+- Use the `Key` suffix for an identifier that is neither a primary key nor a foreign key, for example `DatasetKey`. Use the domain-appropriate type; it is usually `string`.
